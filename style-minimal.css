@@ -1,0 +1,185 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  background: #f6f9fc;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.minimal-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 32px 0 rgba(37,99,235,0.08), 0 1.5px 8px 0 rgba(37,99,235,0.04);
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: cardIn 0.7s cubic-bezier(.4,0,.2,1);
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+.minimal-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+.minimal-subtitle {
+  font-size: 1.08rem;
+  color: #5a5a7a;
+  text-align: center;
+  margin-bottom: 2.1rem;
+  font-weight: 400;
+}
+.role-select {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 2.1rem;
+  width: 100%;
+  justify-content: center;
+}
+.role-btn {
+  flex: 1 1 0;
+  background: #f6f9fc;
+  border: 2px solid #e3e7f0;
+  border-radius: 1rem;
+  padding: 1.1rem 0.5rem 0.7rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+  font-size: 1.08rem;
+  color: #222;
+  font-weight: 500;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.role-btn.selected, .role-btn:focus {
+  border-color: #2563eb;
+  background: #eaf1ff;
+  color: #2563eb;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.08);
+}
+.role-btn .role-icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.input-icon {
+  position: absolute;
+  left: 1.1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b3b8d0;
+  font-size: 1.15rem;
+}
+.minimal-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1.5px solid #e3e7f0;
+  background: #f6f9fc;
+  color: #222;
+  font-size: 1.13rem;
+  padding: 1.1rem 1.1rem 1.1rem 2.8rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  outline: none;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+}
+.minimal-input:focus {
+  border-color: #2563eb;
+  background: #fff;
+}
+.minimal-label {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #5a5a7a;
+  font-size: 1.01rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.minimal-btn {
+  background: linear-gradient(90deg, #2563eb 60%, #3b82f6 100%);
+  color: #fff;
+  border: none;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.13rem;
+  padding: 1.1rem 0;
+  width: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.7rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10);
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  cursor: pointer;
+}
+.minimal-btn:hover {
+  background: linear-gradient(90deg, #1746a2 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.18);
+}
+.minimal-btn:active {
+  transform: scale(0.98);
+}
+.alert {
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  background: rgba(255, 0, 0, 0.08);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b33;
+  animation: cardIn 0.5s;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  text-align: center;
+}
+.text-muted {
+  color: #b3b8d0 !important;
+  font-size: 1.07rem;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+.link {
+  color: #2563eb;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  cursor: pointer;
+}
+.link:hover {
+  color: #1746a2;
+}
+.footer-minimal {
+  width: 100vw;
+  text-align: center;
+  color: #b3b8d0;
+  font-size: 1.01rem;
+  padding: 2.5rem 0 1.2rem 0;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 600px) {
+  .minimal-card {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+} 

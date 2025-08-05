@@ -1,0 +1,181 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: radial-gradient(ellipse at 50% 0%, #23243a 60%, #181926 100%);
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.starry-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.center-viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.glass-card {
+  background: rgba(36, 39, 54, 0.85);
+  box-shadow: 0 8px 40px 0 rgba(0,0,0,0.45), 0 1.5px 8px 0 rgba(37,99,235,0.10);
+  border-radius: 2rem;
+  backdrop-filter: blur(16px) saturate(160%);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  border: 1.5px solid rgba(255,255,255,0.08);
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  position: relative;
+  z-index: 1;
+  animation: cardIn 0.8s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: none; }
+}
+
+.brand-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.01em;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  width: 100%;
+}
+.brand-slogan {
+  font-size: 1.1rem;
+  color: #b3b8d0;
+  text-align: center;
+  margin-bottom: 2.2rem;
+  font-weight: 400;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  width: 100%;
+}
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.form-control {
+  width: 100%;
+  border-radius: 1.2rem;
+  border: 1.5px solid #35364a;
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  font-size: 1.13rem;
+  padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-shadow: none;
+  outline: none;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  text-align: left;
+}
+.form-label {
+  position: absolute;
+  left: 1.2rem;
+  top: 1.1rem;
+  color: #b3b8d0;
+  font-size: 1.08rem;
+  pointer-events: none;
+  background: transparent;
+  padding: 0 0.25rem;
+  transition: 0.2s cubic-bezier(.4,0,.2,1);
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+}
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  top: 0.3rem;
+  left: 1rem;
+  font-size: 0.93rem;
+  color: #2563eb;
+  background: transparent;
+}
+.btn-primary, .btn.btn-primary {
+  background: linear-gradient(90deg, #2563eb 60%, #3b82f6 100%);
+  border: none;
+  border-radius: 1.2rem;
+  font-weight: 600;
+  font-size: 1.13rem;
+  padding: 1.1rem 0;
+  width: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.7rem;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.15s;
+  box-shadow: 0 2px 8px 0 rgba(37,99,235,0.10);
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+}
+.btn-primary:hover, .btn.btn-primary:hover {
+  background: linear-gradient(90deg, #1746a2 60%, #2563eb 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 4px 16px 0 rgba(37,99,235,0.18);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.alert {
+  padding: 0.8rem 1.2rem;
+  border-radius: 1rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  background: rgba(255, 0, 0, 0.08);
+  color: #ff6b6b;
+  border: 1px solid #ff6b6b33;
+  animation: cardIn 0.5s;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  text-align: center;
+}
+.text-muted {
+  color: #b3b8d0 !important;
+  font-size: 1.07rem;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  text-align: center;
+  width: 100%;
+}
+.link {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+}
+.link:hover {
+  color: #2563eb;
+}
+.footer-glass {
+  width: 100vw;
+  text-align: center;
+  color: #b3b8d0;
+  font-size: 1.01rem;
+  padding: 2.5rem 0 1.2rem 0;
+  font-family: 'Inter', 'Roboto', system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+@media (max-width: 600px) {
+  .glass-card, .container-tight {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+} 
